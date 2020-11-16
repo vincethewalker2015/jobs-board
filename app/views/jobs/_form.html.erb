@@ -1,0 +1,67 @@
+<%= form_with(model: job, local: true) do |form| %>
+  <% if job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+        <% job.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recruiter %>
+    <%= form.text_field :recruiter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recruiter_company %>
+    <%= form.text_field :recruiter_company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_title %>
+    <%= form.text_field :job_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :permanent_or_contract %>
+    <%= form.text_field :permanent_or_contract %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hiring_company %>
+    <%= form.text_field :hiring_company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cv_submitted %>
+    <%= form.check_box :cv_submitted %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :outcome %>
+    <%= form.text_field :outcome %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
