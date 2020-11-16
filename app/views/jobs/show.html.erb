@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @job.date %>
+</p>
+
+<p>
+  <strong>Recruiter:</strong>
+  <%= @job.recruiter %>
+</p>
+
+<p>
+  <strong>Recruiter company:</strong>
+  <%= @job.recruiter_company %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @job.job_title %>
+</p>
+
+<p>
+  <strong>Permanent or contract:</strong>
+  <%= @job.permanent_or_contract %>
+</p>
+
+<p>
+  <strong>Hiring company:</strong>
+  <%= @job.hiring_company %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @job.link %>
+</p>
+
+<p>
+  <strong>Cv submitted:</strong>
+  <%= @job.cv_submitted %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @job.notes %>
+</p>
+
+<p>
+  <strong>Outcome:</strong>
+  <%= @job.outcome %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
